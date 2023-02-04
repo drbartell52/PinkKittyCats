@@ -6,6 +6,7 @@ using UnityEngine;
 public class Waterdrop : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
+    private GameManager _gameManager;
 
     private void Awake()
     {

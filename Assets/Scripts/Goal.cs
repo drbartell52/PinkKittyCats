@@ -6,6 +6,7 @@ using UnityEngine;
 public class Goal : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
+    private GameManager _gameManager;
 
     private void Awake()
     {
@@ -28,7 +29,8 @@ public class Goal : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Waterdrop"))
         {
-            Debug.Log("waterdrop hit");   
+            _gameManager.WaterdropFindRoot();
+            //Debug.Log("win");
         }
         
     }
