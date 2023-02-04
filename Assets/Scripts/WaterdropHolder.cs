@@ -5,20 +5,19 @@ using UnityEngine;
 public class WaterdropHolder : MonoBehaviour
 {
     public GameManager gameManager;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         // JUST FOR TESTING
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Destroy(gameObject);
-        }    
+            SpillTheBucket();
+        }
     }
-    
+
+    // supposed to destroy both at the same time so both waterdrops fall at once
+    public void SpillTheBucket()
+    {
+        Destroy(gameObject);  
+    }
 }

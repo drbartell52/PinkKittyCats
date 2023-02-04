@@ -25,6 +25,8 @@ public class Waterdrop : MonoBehaviour
         isFalling = false;
     }
 
+    // destroys the waterdrop if it goes off screen.
+    // it should be almost impossible to not do this deliberately in the game lol
     private void OnTriggerEnter2D(Collider2D col)
     {
         _gameManager.WaterDropMiss();

@@ -15,7 +15,7 @@ public class WaterdropHolderMovement : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+    // everything in Update() and FixedUpdate() controls the movement of the holder
     void Update()
     {
         movement = Input.GetAxisRaw("Horizontal");
@@ -23,6 +23,7 @@ public class WaterdropHolderMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // will only move if GameState is Playing
         if (gameManager.GetGameState() == GameState.Playing)
         {
             Vector2 delta = new Vector2(movement * Time.fixedDeltaTime * speed, 0);

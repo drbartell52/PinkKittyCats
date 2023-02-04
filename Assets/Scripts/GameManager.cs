@@ -22,11 +22,9 @@ public class GameManager : MonoBehaviour
     // called by player waterdrop when it goes out of bounds
     public void WaterDropMiss()
     {
-        Debug.Log("Miss!");
         lives--;
         if (lives == 0)
         {
-            Debug.Log("game over");
             _gameState = GameState.GameOver;
         }
         else

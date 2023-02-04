@@ -12,25 +12,12 @@ public class Goal : MonoBehaviour
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
-    
+
     public void SetGameManager(GameManager manager)
     {
         _gameManager = manager;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
-    
     // checks which waterdrop hit the 'roots' first.
     // timeScale is used here to freeze/unfreeze everything so both don't end up 'winning'
     private void OnCollisionEnter2D(Collision2D col)
