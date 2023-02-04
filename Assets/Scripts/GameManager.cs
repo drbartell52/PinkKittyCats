@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public GameObject playerDropPrefab;
     public GameObject enemyDropPrefab;
     private GameState _gameState;
-    // Start is called before the first frame update
+    private int lives;
     void Start()
     {
         _gameState = GameState.Playing;
@@ -19,22 +19,30 @@ public class GameManager : MonoBehaviour
         return _gameState;
     }
 
-    // Update is called once per frame
-    void Update()
+    // called by player waterdrop when it goes out of bounds
+    public void WaterDropMiss()
     {
-        
+        Debug.Log("Miss!");
+        lives--;
+        if (lives == 0)
+        {
+            Debug.Log("game over");
+            _gameState = GameState.Lost;
+        }
+        else
+        {
+            SpawnWaterDrop();
+        }
     }
 
-    public void WaterdropFindRoot()
-    {
-        _gameState = GameState.Won;
-        Debug.Log("win.");
-    }
+    
     private void SpawnWaterDrop()
     {
         if (_gameState == GameState.Playing)
         {
             GameObject waterdropObject = Instantiate(playerDropPrefab);
+            Waterdrop drop = waterdropObject.GetComponent<Waterdrop>();
+            drop.SetGameManager(this);
         }
     }
 }

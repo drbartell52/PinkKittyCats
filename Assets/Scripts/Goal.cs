@@ -12,6 +12,11 @@ public class Goal : MonoBehaviour
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
+    
+    public void SetGameManager(GameManager manager)
+    {
+        _gameManager = manager;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -25,13 +30,24 @@ public class Goal : MonoBehaviour
         
     }
     
+    public void WaterdropFindRoot()
+    {
+        Debug.Log("win.");
+    }
+    
+    // checks which waterdrop hit the 'roots' first.
+    // timeScale is used here to freeze/unfreeze everything so both don't end up 'winning'
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("Waterdrop"))
+        if (col.gameObject.CompareTag("Player Waterdrop"))
         {
-            _gameManager.WaterdropFindRoot();
-            //Debug.Log("win");
+            Time.timeScale = 0.0f;
+            WaterdropFindRoot();
         }
-        
+        else
+        {
+            Time.timeScale = 0.0f;
+            Debug.Log("Lose");
+        }
     }
 }
