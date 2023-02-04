@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 7338799936995857826}
   - component: {fileID: 7338799936995857837}
   - component: {fileID: 7338799936995857836}
-  - component: {fileID: 7338799936995857824}
-  - component: {fileID: 7338799936995857827}
   - component: {fileID: 7338799936995857825}
   m_Layer: 0
   m_Name: PlayerDrop
@@ -109,30 +107,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7338799936995857824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7338799936995857839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2309a041e414876be4bca7d8816bde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7338799936995857827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7338799936995857839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8abbd3bc6856a40edb309763209c3fb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &7338799936995857825
 CircleCollider2D:
   m_ObjectHideFlags: 0
