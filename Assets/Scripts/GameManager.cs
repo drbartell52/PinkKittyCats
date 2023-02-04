@@ -27,12 +27,22 @@ public class GameManager : MonoBehaviour
         if (lives == 0)
         {
             Debug.Log("game over");
-            _gameState = GameState.Lost;
+            _gameState = GameState.GameOver;
         }
         else
         {
             SpawnWaterDrop();
         }
+    }
+
+    public void Lose()
+    {
+        _gameState = GameState.Lost;
+    }
+
+    public void Win()
+    {
+        _gameState = GameState.Won;
     }
 
     

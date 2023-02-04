@@ -6,7 +6,7 @@ using UnityEngine;
 public class Goal : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
-    private GameManager _gameManager;
+    [SerializeField] private GameManager _gameManager;
 
     private void Awake()
     {
@@ -30,10 +30,6 @@ public class Goal : MonoBehaviour
         
     }
     
-    public void WaterdropFindRoot()
-    {
-        Debug.Log("win.");
-    }
     
     // checks which waterdrop hit the 'roots' first.
     // timeScale is used here to freeze/unfreeze everything so both don't end up 'winning'
@@ -41,13 +37,13 @@ public class Goal : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player Waterdrop"))
         {
+            _gameManager.Win();
             Time.timeScale = 0.0f;
-            WaterdropFindRoot();
         }
         else
         {
+            _gameManager.Lose();
             Time.timeScale = 0.0f;
-            Debug.Log("Lose");
         }
     }
 }

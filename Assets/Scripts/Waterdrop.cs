@@ -25,19 +25,6 @@ public class Waterdrop : MonoBehaviour
         isFalling = false;
     }
 
-    // TODO make GameManager handle freezing physics when one drop collides with goal
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Time.timeScale = 0.0f;
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            Time.timeScale = 1.0f;
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D col)
     {
         _gameManager.WaterDropMiss();
