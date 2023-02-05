@@ -15,11 +15,26 @@ public class TitleUIManager : MonoBehaviour
     public void StartGame()
     {
         levelList.CurrentLevel++;
-        // if (levelList.CurrentLevel >= levelList.levels.Count)
-        // {
-        //     levelList.CurrentLevel = 0;
-        // }
         SceneManager.LoadScene(levelList.levels[levelList.CurrentLevel]);
         Time.timeScale = 1.0f;
+    }
+    
+    public void BackButton()
+    {
+        // if this doesnt work hardcode it to whatever scene the title is
+        levelList.CurrentLevel = 0;
+        SceneManager.LoadScene(levelList.levels[levelList.CurrentLevel]);
+    }
+    
+    public void HowToButton()
+    {
+        // if this doesnt work hardcode it to whatever scene the title is
+        levelList.CurrentLevel = 3;
+        SceneManager.LoadScene(levelList.levels[levelList.CurrentLevel]);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }

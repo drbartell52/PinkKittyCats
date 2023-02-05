@@ -44,6 +44,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/OneDrive/Documents/introduction to game design/game jam stuff/Builds\GGJ.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\isiah\OneDrive\Documents\introduction to game design\game jam stuff\Builds" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.9f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\Users\isiah\unity projects\PinkKittyCats&quot; -debugCodeOptimization" />
@@ -91,7 +99,7 @@
       <updated>1675486549190</updated>
       <workItem from="1675486550656" duration="3242000" />
       <workItem from="1675537055593" duration="181000" />
-      <workItem from="1675537406821" duration="24391000" />
+      <workItem from="1675537406821" duration="25603000" />
     </task>
     <servers />
   </component>
