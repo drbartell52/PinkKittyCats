@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level2_DanTestScene.unity
     guid: 4a3970bb921025e468091011b14af95c
   - enabled: 1
+    path: Assets/Scenes/Level3_DanLena.unity
+    guid: 9aa87656e6d7c74409370ce77bec4a01
+  - enabled: 1
     path: Assets/Scenes/Title/HowToScreen.unity
     guid: dcf7959155e9ffd4abf7df00669df03b
   m_configObjects: {}
