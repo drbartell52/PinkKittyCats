@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb312d98ec21ab4589208953a272b79, type: 3}
   m_Name: Level List
   m_EditorClassIdentifier: 
-  CurrentLevel: 0
+  CurrentLevel: 1
   levels:
+  - SimpleTitleScreen
   - Level1_IsiahTestScene
   - Level2_DanTestScene
