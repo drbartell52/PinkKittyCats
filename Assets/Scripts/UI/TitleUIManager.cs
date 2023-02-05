@@ -29,7 +29,7 @@ public class TitleUIManager : MonoBehaviour
     public void HowToButton()
     {
         // if this doesnt work hardcode it to whatever scene the title is
-        levelList.CurrentLevel = 3;
+        levelList.CurrentLevel = 4;
         SceneManager.LoadScene(levelList.levels[levelList.CurrentLevel]);
     }
 
