@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     public GameObject playerDropPrefab;
     public GameObject enemyDropPrefab;
     private GameState _gameState;
-    private int lives;
+    [SerializeField] private int lives;
+    [SerializeField] private LevelList levelList;
     // range one should be minimum X value,
     // range two should be maximum X value
     public float enemyDropRangeOne;
@@ -44,7 +45,10 @@ public class GameManager : MonoBehaviour
 
     public void Lose()
     {
-        _gameState = GameState.Lost;
+        if (_gameState != GameState.Won)
+        {
+            _gameState = GameState.Lost;
+        }
     }
 
     public void Win()
@@ -70,6 +74,16 @@ public class GameManager : MonoBehaviour
         {
             Vector3 position = new Vector3(Random.Range(enemyDropRangeOne, enemyDropRangeTwo),0,0);
             GameObject enemyDropObject = Instantiate(prefab, position, Quaternion.identity);
+        }
+    }
+    
+    
+    // LEVEL TESTING PLEASE REMOVE LATER
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            levelList.GoToNextLevel();
         }
     }
 }
