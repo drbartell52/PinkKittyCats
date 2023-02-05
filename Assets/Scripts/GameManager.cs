@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,10 +11,16 @@ public class GameManager : MonoBehaviour
     public GameObject enemyDropPrefab;
     private GameState _gameState;
     private int lives;
+    // range one should be minimum X value,
+    // range two should be maximum X value
+    public float enemyDropRangeOne;
+    public float enemyDropRangeTwo;
+    public GameObject enemyDropBucket;
     void Start()
     {
         _gameState = GameState.Playing;
-        SpawnWaterDrop();
+        SpawnWaterDrop(playerDropPrefab);
+        SpawnEnemyDropAndBucket(enemyDropPrefab);
     }
 
     public GameState GetGameState()
@@ -29,7 +38,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            SpawnWaterDrop();
+            SpawnWaterDrop(playerDropPrefab);
         }
     }
 
@@ -44,13 +53,23 @@ public class GameManager : MonoBehaviour
     }
 
     
-    private void SpawnWaterDrop()
+    private void SpawnWaterDrop(GameObject prefab)
     {
         if (_gameState == GameState.Playing)
         {
-            GameObject waterdropObject = Instantiate(playerDropPrefab);
+            GameObject waterdropObject = Instantiate(prefab);
             Waterdrop drop = waterdropObject.GetComponent<Waterdrop>();
             drop.SetGameManager(this);
+        }
+    }
+    
+    // code smell: this probably shouldn't need its own function just to enable random position
+    private void SpawnEnemyDropAndBucket(GameObject prefab)
+    {
+        if (_gameState == GameState.Playing)
+        {
+            Vector3 position = new Vector3(Random.Range(enemyDropRangeOne, enemyDropRangeTwo),0,0);
+            GameObject enemyDropObject = Instantiate(prefab, position, Quaternion.identity);
         }
     }
 }

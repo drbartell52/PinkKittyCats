@@ -7,7 +7,6 @@ public class Waterdrop : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
     private GameManager _gameManager;
-    private bool isFalling;
 
     private void Awake()
     {
@@ -22,7 +21,6 @@ public class Waterdrop : MonoBehaviour
 
     void Start()
     {
-        isFalling = false;
     }
 
     // destroys the waterdrop if it goes off screen.
