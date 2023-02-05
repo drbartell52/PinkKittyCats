@@ -2863,7 +2863,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1465656571
@@ -2886,7 +2886,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: lose!
+  m_text: The enemy made it to the ground first!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3517,6 +3517,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 348663451}
     m_Modifications:
+    - target: {fileID: 2104371435849442334, guid: 7aa999f476386ff438d816a90fe630b9, type: 3}
+      propertyPath: m_text
+      value: Go Again?
+      objectReference: {fileID: 0}
     - target: {fileID: 2104371436159920576, guid: 7aa999f476386ff438d816a90fe630b9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
